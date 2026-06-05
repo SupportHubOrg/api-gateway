@@ -22,7 +22,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 builder.Services.AddAuthorization();
 
-
 //Register Service Discovery and YARP
 builder.Services.AddServiceDiscovery();
 builder.Services.AddReverseProxy()
