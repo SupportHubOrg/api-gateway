@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: api-gateway-config
 data:
-  #Inject standard production flags
   ASPNETCORE_ENVIRONMENT: "Production"
-  NODE_ENV: "production"
-  #Service-specific environment variables will be added here
+  #Authentication settings matching the cluster internal DNS
+  Authentication__Authority: "http://keycloak.default.svc.cluster.local:8080/realms/supporthub"
+  Authentication__Audience: "api-gateway"

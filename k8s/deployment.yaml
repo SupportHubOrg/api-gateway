@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        #Replace with actual container registry URL
-        image: your-registry.com/issueresolutionorg/api-gateway:latest
+        image: your-registry.com/supporthub/api-gateway:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
         envFrom:
