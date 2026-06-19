@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: api-gateway-config
 data:
-  ASPNETCORE_ENVIRONMENT: "Production"
+  ASPNETCORE_ENVIRONMENT: "Development"
   #Authentication settings matching the cluster internal DNS
-  Authentication__Authority: "http://keycloak.default.svc.cluster.local:8080/realms/supporthub"
+  Authentication__Authority: "http://keycloak.default.svc.cluster.local/realms/supporthub"
   Authentication__Audience: "api-gateway"
