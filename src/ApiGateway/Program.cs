@@ -12,7 +12,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true, //Ensure the token was issued by the trusted Keycloak server
-            ValidIssuer = "http://supporthub.local/realms/supporthub",
+            ValidIssuer = "https://dingbat-brussels-dimmer.ngrok-free.dev/realms/supporthub",
             ValidateAudience = false, //Audience validation is handled by individual services, so we disable it here
             ValidateLifetime = true, //Ensure the token has not expired
             ValidateIssuerSigningKey = true, //Ensure the token's signature is valid and was signed by the trusted Keycloak server
